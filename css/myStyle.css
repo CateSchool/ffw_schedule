@@ -13,7 +13,7 @@
 }
 
 .accordion-body div {
-    padding-bottom: 6px;
+    /* padding-bottom: 6px; */
 }
 
 h1 {
@@ -23,3 +23,38 @@ h1 {
 /* .accordion-body .row div:first-of-type {
     text-align: left;
 } */
+
+.accordion-body .row div {
+    /* font-weight: 500; */
+    text-align: left;
+} 
+
+.accordion-body .row {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.accordion-body .row:last-of-type {
+    border-bottom: none;
+}
+
+.location {
+    font-size: 80%;
+    color: #6ea8ff;
+    /* font-weight: 200; */
+    font-style: italic;
+}
+
+.extraEvent {
+    font-size: 80%;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.extraInfo {
+    font-size: 80%;
+    /* font-weight: bold; */
+    font-style: italic;
+    color: gray;
+}
