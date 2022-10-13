@@ -7,7 +7,7 @@ body {
 }
 
 div {
-    /* font-family: "nobel", sans-serif; */
+    font-family: Poppins, "nobel", sans-serif;
 }
 
 .cateBlue {
@@ -79,10 +79,12 @@ h1 {
     /* color: #65b2e8; */
     color: #3068a5;
     font-style: italic;
+    font-family: PoppinsItalic;
 }
 
 .extraEvent {
     font-size: 80%;
+    font-family: PoppinsBold;
     font-weight: bold;
     font-style: italic;
 }
@@ -90,11 +92,22 @@ h1 {
 .extraInfo {
     font-size: 80%;
     /* font-weight: bold; */
+    font-family: PoppinsItalic;
     font-style: italic;
     /* color: gray; */
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url(assets/Poppins/Poppins-Medium.ttf) format('ttf');
+    src: url(assets/Poppins/Poppins-Regular.ttf) format('ttf');
+}
+
+@font-face {
+    font-family: 'PoppinsBold';
+    src: url(assets/Poppins/Poppins-Bold.ttf) format('ttf');
+}
+
+@font-face {
+    font-family: 'PoppinsItalic';
+    src: url(assets/Poppins/Poppins-Italic.ttf) format('ttf');
 }
