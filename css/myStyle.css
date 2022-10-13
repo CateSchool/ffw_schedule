@@ -1,3 +1,30 @@
+body {
+    font-family: Poppins;
+}
+
+.navbar-brand img {
+    height: 50px;
+}
+
+div {
+    /* font-family: "nobel", sans-serif; */
+}
+
+.cateBlue {
+    background-color: #3068a5;
+    color: white;
+}
+
+.cateMauve {
+    background-color: #a28ca7;
+    color: white;
+}
+
+/* .t-cateMauve {
+    color: #a28ca7;
+    color: white;
+} */
+
 #introSection {
     padding-bottom: 4rem;
 }
@@ -16,6 +43,11 @@
     /* padding-bottom: 6px; */
 }
 
+.accordion-button:not(.collapsed) {
+    color: #3068a5;
+    /* background-color: #3069a516; */
+}
+
 h1 {
     padding-bottom: 10px;
 }
@@ -27,7 +59,7 @@ h1 {
 .accordion-body .row div {
     /* font-weight: 500; */
     text-align: left;
-} 
+}
 
 .accordion-body .row {
     border-bottom: 1px solid rgba(0, 0, 0, 0.125);
@@ -41,8 +73,11 @@ h1 {
 
 .location {
     font-size: 80%;
-    color: #6ea8ff;
+    /* color: #6ea8ff; */
+    /* color: #a28ca7; */
     /* font-weight: 200; */
+    /* color: #65b2e8; */
+    color: #3068a5;
     font-style: italic;
 }
 
@@ -56,5 +91,10 @@ h1 {
     font-size: 80%;
     /* font-weight: bold; */
     font-style: italic;
-    color: gray;
+    /* color: gray; */
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(assets/Poppins/Poppins-Medium.ttf) format('ttf');
 }
