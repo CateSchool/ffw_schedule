@@ -1,7 +1,7 @@
 let table;
 
 function preload() {
-  table = loadTable('schedule.csv', 'csv', 'header');
+  table = loadTable('sun.csv', 'csv', 'header');
   //the file can be remote
   //table = loadTable("http://p5js.org/reference/assets/mammals.csv",
   //                  "csv", "header");
