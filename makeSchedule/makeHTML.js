@@ -9,7 +9,13 @@ function preload() {
 }
 
 function setup() {
-  console.log(getPage());
+  // console.log(getPage());
+  let text = getPage();
+  navigator.clipboard.writeText(text).then(function () {
+    console.log('Async: Copying to clipboard was successful!');
+  }, function (err) {
+    console.error('Async: Could not copy text: ', err);
+  });
 }
 
 function getSeason() {
@@ -19,17 +25,17 @@ function getSeason() {
 function getDate(day) {
   if (day == "thurs")
     return "THURSDAY, " + meta.findRow('thurs_date', 'item').getString("content").toUpperCase();
-  
-    else if (day == "fri")
+
+  else if (day == "fri")
     return "FRIDAY, " + meta.findRow('fri_date', 'item').getString("content").toUpperCase();
 
   else if (day == "sat")
     return "SATURDAY, " + meta.findRow('sat_date', 'item').getString("content").toUpperCase();
 
   else if (day == "sun")
-    return "SUNDAY, " +  meta.findRow('sun_date', 'item').getString("content").toUpperCase();
-  
-    return "";
+    return "SUNDAY, " + meta.findRow('sun_date', 'item').getString("content").toUpperCase();
+
+  return "";
 }
 
 function getPage() {
@@ -56,7 +62,7 @@ function getPage() {
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark cateBlue">
             <div class="container">
-                <a class="navbar-brand" href="https://cateschool.org/"><img src="assets/cate_logo_sm.png" /></a>
+                <a class="navbar-brand" href="https://www.cate.org/"><img src="assets/cate_logo_sm.png" /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -88,8 +94,11 @@ function getPage() {
         <section id="modSection" class="bg-light">
             <div class="container">
     
-                <h2>NOTE TO FAMILIES:</h2>
-                <h2>MOD <a href="tel:805-698-4808">805-698-4808</a></h2>
+              <div class="text-center">
+                <h1>Note to Families</h1>
+              </div>
+              <h4>MOD: <a href="tel:805-698-4808">(805) 698-4808</a></h4>
+    
                 <ul>
                     <li>All boarding students must be signed into campus by 10:00 p.m. unless signed out in our special
                         Family Weekend system to stay with their parents for Saturday and/or Sunday night. </li>
@@ -108,10 +117,9 @@ function getPage() {
             <div class="container">
                 <div class="text-center">
                     <h1>Blue Ewe Store Hours</h1>
-                    <p>Friday – 8 a.m. – 5 p.m.</p>
-                    <p>Saturday – 9:00 a.m. – 2:00 p.m.</p>
-                    <p>Sunday – 11:00 a.m. – 2:00 p.m</p>
-                    </p>
+                    <p>Friday: 9 AM – 4 PM</p>
+                    <p>Saturday: 9 AM – 2 PM</p>
+                    <p>Sunday: 11 AM – 2 PM</p>
                 </div>
             </div>
         </section>
@@ -131,7 +139,7 @@ function getAccordionItem(d, table, index) {
   return `
     <div class="accordion-item">
         <h2 class="accordion-header" id="heading${index}">
-            <button class="accordion-button${index==0?"":" collapsed"} type="button" data-bs-toggle="collapse"
+            <button class="accordion-button${index == 0 ? "" : " collapsed"} type="button" data-bs-toggle="collapse"
                 data-bs-target="#collapse${index}" aria-expanded="true" aria-controls="collapse${index}">
                 ${day}
             </button>
@@ -204,7 +212,7 @@ function getCSV(day) {
     id = "179506552"
   }
   else if (day == "sun") {
-    id= "448196084"
+    id = "448196084"
   }
   let url = `https://docs.google.com/spreadsheets/d/e/2PACX-1vRpuDEbJOUv8GgvlkpIzDk4VdGJ-9gk2U8KuQutGPF0KtG1tauT0YWDpIuq0heB86otu3ohxXGfRZ-M/pub?gid=${id}&single=true&output=csv`
   return url;

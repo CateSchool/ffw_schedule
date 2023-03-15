@@ -71,6 +71,9 @@ h1 {
     border-bottom: none;
 }
 
+.accordion-button {
+    background-color: #f7f9fc;
+}
 .location {
     font-size: 80%;
     /* color: #6ea8ff; */
